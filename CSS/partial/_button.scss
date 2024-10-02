@@ -1,0 +1,93 @@
+.nav-link-login{
+    text-decoration: none;
+
+    color: $primary-dark-normal;
+    font-size: 18px;
+
+    margin-right: 16px ;
+    border: 1px solid $primary-dark-dark;
+    padding: 8px 16px;
+    border-radius: 18px;
+    transition: .5s ease;
+
+    &:hover{
+        background-color: $primary-dark-dark;
+
+        color: $primary-white-normal;
+
+    }
+
+}
+
+.nav-link-open{
+    text-decoration: none;
+
+    font-size: 18px;
+
+    color: $primary-white-light;
+    background-color: $primary-pink-normal;
+
+    border: 1px solid transparent;
+
+    border-radius: 12px;
+    padding: 8px 24px;
+    font-weight: 500;
+    transition: .5s ease;
+
+    &:hover{
+
+        background-color: $primary-dark-dark;
+        color: $primary-white-normal;
+
+    }
+}
+
+
+.nav-link-open-2{
+
+
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    color: $primary-white-light;
+    background-color: $tacha;
+
+    border: 1px solid transparent;
+
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-weight: 500;
+    transition: .5s ease;
+
+    &:hover{
+
+        background-color: $primary-dark-dark;
+        color: $primary-white-normal;
+
+    }
+
+}
+
+
+//investe
+.inves{
+    border: 1px solid $primary-pink-normal;
+
+    color: $primary-pink-normal;
+    padding: 8px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: .5s ease;
+
+    &:hover{
+
+        background-color: $primary-pink-normal;
+
+        color: $primary-white-normal;
+    }
+
+}

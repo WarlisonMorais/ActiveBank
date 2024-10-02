@@ -1,0 +1,391 @@
+// menu header
+
+
+header{
+    width: 100%;
+    height: 55px;
+    scroll-behavior: smooth;
+    position: fixed;
+    box-shadow: none;
+    z-index: 800;
+    transition: .5s ease;
+    background-color: $primary-white-normal;
+  
+    
+    
+}
+
+.active-header{
+
+    background: $primary-white-dark;
+    
+
+}
+
+
+
+.nav-desktop{
+    display: flex;
+    max-width:  $container-xl;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+   
+  
+    
+
+    @include responsive(m){
+        display: none;
+    }
+    @include responsive(s){
+        display: none;
+    }
+    @include responsive(xs){
+        display: none;
+    }
+
+    
+
+    .navbar-desktop-item-1{
+        display: flex;
+        
+      
+        align-items: center;
+        justify-content: flex-start;
+
+        .logo-nav{
+            justify-content: flex-start;
+
+        }
+
+        .menu-nav-desktop{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 24px;
+
+
+
+            .menu-item{
+                margin-left: 16px;
+                position: relative;
+
+                
+        }
+
+    }
+
+    .navbar-desktop-item-2{
+        display: flex;
+        justify-content: flex-end;
+        
+        flex: 1 1 auto;
+        align-items: center;
+    }
+}
+
+
+.nav-link{
+    color: $primary-dark-normal;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    position: relative;
+
+    font-family: 'Source Sans 3', sans-serif;
+
+    transition: .5s ease;
+
+    &:hover{
+        color: #00B9FF;
+    }
+
+}
+}
+
+
+
+//tratando navbar-mobile
+
+.navbar-mobile{
+    max-width: $container-xl;
+
+    margin: 0 auto;
+
+    align-items: center;
+    
+    justify-content: space-between;
+    padding: 8px 16px;
+
+
+    display: none;
+
+    @include responsive(m){
+        display: flex;
+    }
+    @include responsive(s){
+        display: flex;
+    }
+    @include responsive(xs){
+        display: flex;
+    }
+}
+
+
+// estilizando o bx hamburger
+
+.bx{
+    width: 36px;
+    height: 36px;
+    position: relative;
+    cursor: pointer;
+    z-index: 999;
+    transition: 0.7s ease;
+
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: 17%;
+        width: 70%;
+        height: 2px ;
+        border-radius: 2px;
+        background-color: $primary-dark-dark;
+        transition: 0.5s ease;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 63%;
+        left: 17%;
+        width: 70%;
+        height: 2px ;
+        border-radius: 2px;
+        background-color: $primary-dark-dark;
+        transition: 0.5s ease;
+    }
+}
+
+
+.active-bx{
+    width: 36px;
+    height: 36px;
+    position: relative;
+    cursor: pointer;
+    z-index: 999;
+    transition: 0.7s ease;
+
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 17%;
+        width: 70%;
+        height: 2px ;
+        border-radius: 2px;
+        background-color: $primary-dark-dark;
+        transform: rotate(-135deg);
+        transition: 0.5s ease;
+    }
+
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 17%;
+        width: 70%;
+        height: 2px ;
+        border-radius: 2px;
+        background-color: $primary-dark-dark;
+        transform: rotate(-405deg);
+        transition: 0.5s ease;
+    }
+}
+
+
+// dropdown 
+
+.dropdown-menu{
+
+    background-color: $primary-white-normal;
+    border-radius: 12px;
+  
+    width: 300px;
+    list-style: none;
+    position: absolute;
+    top: 30px;
+    opacity: 0;
+    pointer-events: none;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: .6s ease;
+
+
+    .dropdown-item{
+        width: 100%;
+    }
+
+}
+
+
+.active-dropdown-menu{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.nav-link-dropdown{
+    color: $primary-dark-normal;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 8px 16px;
+    position: relative;
+    transition:  .5s ease;
+   
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Source Sans 3', sans-serif;
+
+
+    &:hover{
+        color: $primary-pink-normal;
+        margin-left: 5px;
+
+    }
+    
+
+}
+
+
+
+
+
+// menu mobile
+
+.menu-mobile{
+    width: 100%;
+    height: 100vh;
+
+
+    background-color: $primary-dark-normal;
+
+    margin: auto;
+
+    opacity: 0;
+    pointer-events:none;
+
+    @include responsive(s){
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    .menu-nav-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding: 8px 0px;
+
+        width: 100%;
+
+
+        .menu-item-mobile{
+            list-style: none;
+        
+            padding: 8px 24px;
+
+            .nav-link-mobile{
+                text-decoration: none;
+                color: $primary-white-normal;
+              
+                @include typeface-2(p3, desktop);
+                @include responsive(s){
+                    @include typeface-2(p3, mobile);
+                }
+
+                transition:  .5s ease;
+
+                &:hover{
+                    color: $primary-pink-normal;
+                    margin-left: 3px;
+
+                }
+            }
+        }
+
+
+    }
+}
+
+.active-menu-mobile{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+// dropdown Menu mobile 
+
+
+.dropdown-menu-mobile{
+
+    background-color: $primary-white-normal;
+    width: 350px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 18px;
+    list-style: none;
+    display: none;
+    transition: .5s ease;
+
+    .dropdown-item-mobile{
+        width: 100%;
+    }
+}
+
+
+.nav-link-dropdown-mobile{
+    text-decoration: none;
+    color: $primary-dark-normal;
+
+    font-size: 16px;
+    font-weight: 600;
+   
+    
+    transition: .5s ease;
+    position: relative;
+
+  
+
+    &:hover{
+        color: #00B9FF;
+        margin-left: 5px;
+    }
+
+}
+
+
+
+
+.active-dropdown-menu-mobile{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+

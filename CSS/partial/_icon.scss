@@ -1,0 +1,279 @@
+//icons of projects 
+
+
+.dropshadow{
+    filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+
+
+.bg-icon-1{
+    &::after{
+        background-image: url('../svg/icon-1.svg');
+        
+        background-size: cover;
+        transition: .5s ease;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        top: 14px;
+        left: 8px;
+        filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+    }
+
+   
+}
+
+
+
+.bg-icon-2{
+    &::after{
+        background-image: url('../svg/icon-2.svg');
+        
+        background-size: cover;
+        transition: .5s ease;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        top: 14px;
+        left: 8px;
+        filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+    }
+
+    
+}
+
+
+
+
+.bg-icon-3{
+    &::after{
+        background-image: url('../svg/icon-3.svg');
+        
+        background-size: cover;
+        transition: .5s ease;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        top: 14px;
+        left: 8px;
+        filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+    }
+
+   
+}
+
+
+
+
+.bg-icon-4{
+    &::after{
+        background-image: url('../svg/icon-4.svg');
+        
+        background-size: cover;
+        transition: .5s ease;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        top: 14px;
+        left: 8px;
+        filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+    }
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+.segurança{
+
+    &::after{
+        background-image: url('../svg/segurança.svg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        top: 34px;
+        left: 8px;
+        cursor: pointer;
+
+    }
+
+}
+
+
+
+
+
+.liber-finan{
+  
+
+    &::after{
+        background-image: url("../svg/liber-finan.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        top: 34px;
+        left: 8px;
+    }
+}
+
+
+
+
+.protege-bg{
+
+    &::after{
+
+        background-image: url("../svg/protege-bg.svg");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 50px;
+        height: 50px;
+
+        cursor: pointer;
+        top: 34px;
+        left: 8px;
+
+    }
+}
+
+
+.vantage-bg{
+
+    &::after{
+        
+    background-image: url("../svg/vantage-bg.svg");
+  
+    top: 34px;
+    left: 8px;
+    background-size: cover;
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    }
+}
+
+
+
+.background-relogio{
+    
+    &::after{
+        
+        background-image: url("../svg/Background-relogio.svg");
+      
+        top: 34px;
+        left: 8px;
+        background-size: cover;
+        cursor: pointer;
+    
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        }
+}
+
+
+
+.background-avião{
+    &::after{
+        
+        background-image: url("../svg/Background-avião.svg");
+      
+        top: 34px;
+        left: 8px;
+        background-size: cover;
+        cursor: pointer;
+    
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        }
+}
+
+
+.background-mobile{
+
+    &::after{
+        
+        background-image: url("../svg/background-mobile.svg");
+      
+        top: 34px;
+        left: 8px;
+        background-size: cover;
+        cursor: pointer;
+    
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        }
+
+}
+
+
+
+.facebook{
+
+    cursor: pointer;
+    transition: .5s ease;
+
+
+    &:hover{
+        fill: #00B9FF;
+    }
+
+}
+
+.linkedin-bg{
+    cursor: pointer;
+    transition: .5s ease;
+
+
+    &:hover{
+        fill: #00B9FF;
+    }
+}
+
+.X-news-bg{
+    cursor: pointer;
+    transition: .5s ease;
+
+
+    &:hover{
+        fill: #00B9FF;
+    }
+}
+
+.youtube-bg-2{
+    cursor: pointer;
+    transition: .5s ease;
+
+
+    &:hover{
+        fill: #00B9FF;
+    }
+}
+
+.instagram-bg{
+    cursor: pointer;
+    transition: .5s ease;
+
+
+    &:hover{
+        fill: #00B9FF;
+    }
+}

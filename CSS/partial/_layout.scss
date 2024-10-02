@@ -1,0 +1,791 @@
+// layout of projects
+
+//container
+
+
+
+$container-xl: 1440px;
+$container-l:1140px;
+$container-m:960px;
+$container-s: 393px;
+$gutter: 24px;
+
+
+
+//mixins of projects
+
+
+@mixin responsive($device){
+    
+    @if $device == xl{
+        // for resolutions upper than 1440px
+        @media screen and (max-width: $container-xl){
+            @content;
+        }
+    }
+
+
+    @else if $device == l{
+        // for resolutions between 1440px and 1267px
+        @media screen and (max-width:$container-xl) and (min-width: $container-l){
+            @content;
+        }
+    }
+
+    @else if $device == m{
+        // for resolutions between 768px and 390px
+        @media screen and (max-width: $container-l) and (min-width:$container-m){
+            @content;
+            
+        }
+    }
+
+    @else if $device == s{
+        // for resolutions less then 390px 
+        @media screen and (max-width:$container-m) {
+            @content;
+        }
+    }
+
+    @else if $device == xs{
+        //for resolution less the 550px
+        @media screen and (max-width:$container-s){
+            @content;
+        }
+    }
+}
+
+
+
+
+@function grid($col, $total: 12){
+    @return($col / $total) * 100%;
+}
+
+
+@for $i from 1 through 12{
+    .grid-#{$i}{
+        width: calc(#{grid($i)} - #{$gutter});
+        margin: $gutter / 2;
+        float: left;
+
+
+
+        @include responsive(m){
+            width: calc(100% - #{$gutter});
+            margin: $gutter / 2;
+            float: none;
+        }
+
+        @include responsive(s){
+            width: calc(100% - #{$gutter});
+            margin: $gutter / 2;
+            float: none;
+            
+
+            
+        }
+
+        @include responsive(xs){
+            width: calc(100% - #{$gutter});
+            margin: $gutter / 2;
+            float: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+.container{
+    max-width: $container-xl;
+   
+    margin: 0 auto;
+    padding: 98px 24px;
+    
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+
+    }
+
+}
+
+.container3{
+    max-width: $container-xl;
+   
+    margin: 0 auto;
+    padding: 58px 24px;
+    
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+
+    }
+
+}
+
+
+
+
+
+.container2{
+    max-width: $container-xl;
+    display: flex;
+    margin: 0 auto;
+    padding: 90px 24px;
+    
+    
+
+
+
+    @include responsive(m){
+        width: 100%;
+    }
+
+    @include responsive(s){
+        width: 100%;
+        
+    }
+}
+
+
+
+
+// estilos pre formatados de classes
+
+.margin-auto{
+    margin: 0 auto;
+}
+
+
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-spacebetween{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.relative{
+    position: relative;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;    
+}
+
+.flex-item-auto1{
+    flex: 1 1 auto;
+}
+
+.flex-item-1{
+    flex: 1 1 570px;
+
+}
+
+
+.flex-item-2{
+    flex: 2 1 360px;
+}
+
+
+.flex-item-3{
+    flex: 3 1 360px;
+}
+
+
+.flex-item-4{
+    flex: 4 1 360px;
+}
+
+.flex-item-5{
+    flex: 5 1 360px;
+}
+
+
+.flex-item-auto{
+    flex: 2 1 auto;
+}
+
+.w-auto{
+    width: auto;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-75{
+    width: 75%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.w-25{
+    width: 25%;
+}
+
+
+.hidden{
+    overflow: hidden;
+}
+
+
+
+// section mains info box
+
+
+.box-section{
+    border: 2px solid $primary-dark-dark;
+    margin: 0 auto;
+
+    padding: 28px 14px;
+    text-align: center;
+    border-radius: 10px;
+    
+
+  a{
+    color: #00B9FF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .5s ease;
+
+
+    &:hover{
+        margin-left: 5px;
+    }
+  }
+}
+
+
+
+
+/// section two
+
+.box-infos{
+
+
+
+    p{
+        color: $primary-dark-normal;
+    }
+
+}
+
+
+.list-1{
+    list-style: none;
+    font-size: 19px;
+
+
+}
+
+
+.list-itens-control{
+    position: relative;
+    padding: 48px 8px 8px 68px;
+
+
+
+    @include responsive(s){
+        padding: 48px 8px 8px 68px;
+    }
+
+
+    &::after{
+        position: absolute;
+        content: ' ';
+        top: 0;
+        left: -8;
+
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+//credits-box
+
+
+.credits-box{
+    height: 100vh;
+    background-color: $primary-dark-dark;
+    border-radius: 12px;
+    padding: 8px 8px;
+
+
+    h2{
+        color: $primary-white-normal;
+    }
+
+
+
+    span{
+        color: #00B9FF;
+        position: relative;
+
+        &::after{
+            content: '';
+
+            width: 50px;
+            height: 2px;
+
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            background-color: #00B9FF;
+        }
+
+
+    }
+}
+
+
+.box-infos-grid{
+
+
+    h3{
+        color: $primary-white-normal;
+
+    }
+
+    p{
+        color: $primary-white-normal;
+       
+
+       
+
+    }
+
+
+    a{
+        color: #00B9FF;
+        text-decoration: none;
+        font-size: 18px;
+
+        position: relative;
+        transition: .6s ease;
+
+        &:hover{
+            margin-left: 4px;
+        }
+
+        i{
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+
+    }
+}
+
+
+.box-img-infos-cards{
+    margin: 0 auto;
+
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+
+   img{
+    width: 100%;
+    height: 480px;
+
+    @include responsive(xs){
+        height: 100%;
+    }
+
+    @include responsive(s){
+        height: 100%;
+    }
+
+    @include responsive(l){
+        height: 100%;
+    }
+   }
+
+  
+}
+
+//pai e filho
+
+
+
+
+.boxs{
+    background-color: $primary-dark-normal;
+
+    border-radius: 16px;
+    height: 220px;
+   
+
+    padding: 16px 24px;
+
+  
+}
+
+
+
+// imagens pai e filho
+
+
+.paiefilho{
+    width: 100vw;
+
+
+
+    .paiefilho1{
+        width: 100%;
+        display: block;
+
+        @include responsive(s){
+            display: none;
+        }
+
+        @include responsive(xs){
+            display: none;
+        }
+    }
+
+
+    .paiefilho2{
+        width: 100%;
+        display: none;
+
+        @include responsive(s){
+            display: block;
+            width: 100%;
+        }
+
+        @include responsive(xs){
+            display: none;
+        }
+    }
+
+    .paiefilho3{
+        width: 100%;
+        display: none;
+
+        @include responsive(s){
+            display: none;
+        
+        }
+
+        @include responsive(xs){
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
+.info-paiefilho{
+     
+     position: absolute;
+     top: 0;
+
+    span{
+        color: #00B9FF;
+
+        font-size: 18px;
+        font-weight: bold;
+
+        position: relative;
+
+
+        &::after{
+            content: " ";
+
+            top: 100%;
+            left: 3px;
+            position: absolute;
+
+            width: 50px;
+            height: 2px;
+
+            background-color: #00B9FF;
+        }
+       
+    }
+}
+
+
+.boxs-infos-prin{
+    
+    
+top: -20px;
+position: relative;
+    
+
+
+    @include responsive(m){
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: auto;
+       
+        
+        
+    }
+
+    @include responsive(s){
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+       
+
+    }
+}
+
+
+// box-shap-4
+
+
+.box-shap-4{
+
+
+    img{
+        width: 100%;
+    }
+   
+}
+
+
+.box-shap-5{
+    
+
+
+    span{
+        font-size: 24px;
+        color: #00B9FF;
+        position: relative;
+
+
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 90%;
+            left: 5px;
+            width: 60px;
+            height: 3px;
+            background-color: #00B9FF;
+
+        }
+    }
+
+
+    p{
+        color: $primary-dark-normal;
+    }
+}
+
+
+
+
+
+.box-shap-6{
+    
+
+
+    span{
+        font-size: 24px;
+        color: #00B9FF;
+        position: relative;
+
+
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 120%;
+            left: 2px;
+            width: 40px;
+            height: 3px;
+            background-color: #00B9FF;
+
+        }
+    }
+
+
+    
+}
+
+
+//security
+
+
+.security{
+    
+
+    span{
+        color: #00B9FF;
+
+        font-size: 18px;
+        font-weight: 600;
+        position: relative;
+
+        &::after{
+            content: " ";
+
+            position: absolute;
+            background-color: #00B9FF;
+            top: 120%;
+            width: 50%;
+            left: 20px;
+
+            height: 2px;
+
+
+        }
+    }
+}
+
+
+
+
+
+
+.box-info-security{
+    padding: 16px 24px;
+
+
+    border-radius: 12px;
+    background-color: $primary-white-normal;
+    border: none;
+    box-shadow: 1px 1px 4px 0px #1a1a1a;
+    top: 160px;
+    left: -100px;
+    position: relative;
+
+    span{
+        background-color: red;
+        font-size: 12px;
+        border-radius: 20px;
+        padding: 8px 8px;
+        color: $primary-white-normal;
+        cursor: pointer;
+        transition: .5s ease;
+
+        &:hover{
+            background-color: $primary-pink-normal ;
+        }
+    }
+
+
+    a{
+        color: #00B9FF;
+        text-decoration: none;
+        font-size: 18px;
+        transition: .5s ease;
+       
+       
+        
+        i{
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+
+
+        &:hover{
+            margin-left: 4px;
+        }
+
+    }
+
+
+    p{
+        color: $primary-dark-normal;
+    }
+
+
+    @include responsive(m){
+        position: relative;
+        top: -50px;
+        left: 0;
+    }
+
+    @include responsive(s){
+        position: relative;
+        top: -50px;
+        left: 0;
+    }
+
+    @include responsive(xs){
+        p{
+            color: $primary-dark-normal;
+            font-size: 14px;
+
+        }
+
+        h3{
+            font-size: 16px;
+        }
+    }
+    
+   
+}
+
+
+
+.info-box-midia{
+
+    padding: 14px 24px;
+
+    h3{
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+
+    p{
+        color: $primary-dark-normal;
+
+    }
+
+
+    a{
+        color: #00B9FF;
+        text-decoration: none;
+        font-size: 18px;
+        transition: .5s ease;
+
+
+        i{
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        &:hover{
+            margin-left: 4px;
+        }
+    }
+}
+

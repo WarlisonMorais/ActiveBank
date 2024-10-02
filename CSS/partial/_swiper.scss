@@ -1,0 +1,290 @@
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    top: 55px;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .slide img {
+   
+    height: 585px;
+  }
+  
+  .info {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    color: #fff;
+    padding: 10px;
+   
+    max-width: 90%;
+
+
+    @include responsive(s){
+      top: 0;
+      left: 10px;
+    
+     
+      
+
+      
+    }
+
+
+    @include responsive(xs){
+      top: 0;
+      left: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      
+     
+
+      
+    }
+
+
+
+    .p-1{
+        background-color: $primary-dark-normal;
+
+        padding: 16px 16px;
+        color: $primary-white-normal;
+        font-size: 28px;
+        border-radius: 8px;
+        width: 100%;
+
+
+        @include responsive(xs){
+          font-size: 18px;
+
+        }
+
+    }
+
+
+    .p-2{
+        background-color: $primary-dark-normal;
+        padding: 16px 16px;
+        color: $primary-white-normal;
+        font-size: 28px;
+        border-radius: 8px;
+        width: 100%;
+        font-weight: 600;
+
+        @include responsive(xs){
+          font-size: 18px;
+        
+
+        }
+    }
+  }
+  
+  
+ 
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+   
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+
+.imag-1-1{
+  width: 100%;
+
+  @include responsive(s){
+    display: none;
+  }
+
+  @include responsive(xs){
+    display: none;
+  }
+  
+
+
+  
+
+}
+
+
+.imag-1-2{
+  
+  display: none;
+
+  @include responsive(s){
+    display:block;
+    width: 100%;
+  }
+  
+
+  @include responsive(xs){
+    display:none;
+    width: 100%;
+  }
+
+
+  
+
+}
+
+.imag-1-3{
+  width: 100%;
+  display: none;
+
+  @include responsive(xs){
+    display:block;
+    width: 100%;
+  }
+  
+
+
+}
+
+
+
+//2
+
+.imag-2-1{
+  width: 100%;
+
+  @include responsive(s){
+    display: none;
+  }
+
+  @include responsive(xs){
+    display: none;
+  }
+  
+
+
+  
+
+}
+
+
+.imag-2-2{
+  
+  display: none;
+
+  @include responsive(s){
+    display:block;
+    width: 100%;
+  }
+  
+
+  @include responsive(xs){
+    display:none;
+    width: 100%;
+  }
+
+
+  
+
+}
+
+.imag-2-3{
+
+  display: none;
+
+  @include responsive(xs){
+    display:block;
+    height: 650px;
+    width: 100%;
+   
+  }
+  
+
+
+}
+
+
+//3 
+
+
+
+
+
+.imag-3-1{
+  width: 100%;
+
+  @include responsive(s){
+    display: none;
+  }
+
+  @include responsive(xs){
+    display: none;
+  }
+  
+
+
+  
+
+}
+
+
+.imag-3-2{
+  
+  display: none;
+
+  @include responsive(s){
+    display:block;
+    width: 100%;
+  }
+  
+
+  @include responsive(xs){
+    display:none;
+    width: 100%;
+  }
+
+
+  
+
+}
+
+.imag-3-3{
+  width: 100%;
+  display: none;
+
+  @include responsive(xs){
+    display:block;
+    width: 100%;
+  }
+  
+
+
+}
